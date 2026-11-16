@@ -1,0 +1,16 @@
+name: CI
+on: { push: { branches: [main] }, pull_request: {} }
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: '21', cache: maven }
+      # dependency-free engine check (no network):
+      - run: |
+          mkdir -p build
+          javac -d build $(find src/main/java src/test/java -name "*.java" ! -name DetectorApp.java ! -name RuleEngineTest.java)
+          java -cp build aegis.detect.Harness
+      # full suite + consumer build:
+      - run: mvn -B test

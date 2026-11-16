@@ -1,0 +1,6 @@
+id: s3-public
+title: S3 bucket made public
+severity: critical
+when:
+  all:
+    - { field: type, eq: s3_public }

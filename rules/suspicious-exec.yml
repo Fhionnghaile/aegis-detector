@@ -1,0 +1,7 @@
+id: suspicious-exec
+title: Suspicious process execution
+severity: medium
+when:
+  any:
+    - { field: process.cmd, regex: "(curl|wget).*\\| ?(ba)?sh" }
+    - { field: process.cmd, contains: "/dev/tcp/" }

@@ -1,0 +1,11 @@
+id: auth-bruteforce
+title: Repeated failed logins
+severity: high
+when:
+  all:
+    - { field: source, eq: auth }
+    - { field: type,   eq: login_failed }
+threshold:
+  count: 5
+  within: 60s
+  group_by: [ "actor.user" ]
