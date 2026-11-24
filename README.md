@@ -4,7 +4,7 @@
 > **A streaming detection consumer that turns a firehose of events into scored alerts.**  
 > **Result:** 3 JUnit tests (RuleEngineTest) pass under `mvn test`, plus a dependency-free harness; table-driven detection logic.  
 > **Reproduce:** `mvn test`  
-> ![CI](https://github.com/fhionnghaile/aegis-detector/actions/workflows/ci.yml/badge.svg)
+> ![CI](https://github.com/fhionnghaile/aegis-detector/actions/workflows/ci.yml/badge.svg) [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/Fhionnghaile/aegis-detector/badge)](https://scorecard.dev/viewer/?uri=github.com/Fhionnghaile/aegis-detector)
 >
 > **What this is worth:** Where raw telemetry becomes 'something is wrong' — the signal a SOC actually acts on.
 
