@@ -34,7 +34,7 @@ detection logic compiles and runs anywhere:
 javac -d build $(find src/main src/test -name "*.java" ! -name DetectorApp.java ! -name RuleEngineTest.java)
 java -cp build aegis.detect.Harness     # 15 checks, ALL PASS
 ```
-Full build + JUnit 5 + the Kafka consumer:
+Full build + JUnit + the Kafka consumer (kafka-clients 4.4.0):
 ```bash
 mvn test            # runs RuleEngineTest
 mvn -q package      # builds the DetectorApp consumer (kafka-clients)
