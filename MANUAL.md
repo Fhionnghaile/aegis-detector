@@ -11,6 +11,9 @@ The second Aegis service reads raw events from Kafka, applies detection rules wr
 ## 3. Demo
 Capture to record: the dependency-free harness (`java -cp build aegis.detect.Harness`) printing all checks passing, plus `mvn test`.
 
+![Real test run, captured 24 Nov 2026](docs/test-run.svg)
+*Real output from this repository's own tests, captured 24 Nov 2026.*
+
 ## 4. Run it yourself
 **Prerequisites:** JDK. Maven for the JUnit suite and the Kafka consumer.
 

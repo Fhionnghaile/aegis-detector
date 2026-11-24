@@ -2,8 +2,8 @@
 
 <!-- at-a-glance -->
 > **A streaming detection consumer that turns a firehose of events into scored alerts.**  
-> **Result:** 3 JUnit suites; table-driven detection logic.  
-> **Reproduce:** `mvn test   # (or ./gradlew test)`  
+> **Result:** 3 JUnit tests (RuleEngineTest) pass under `mvn test`, plus a dependency-free harness; table-driven detection logic.  
+> **Reproduce:** `mvn test`  
 > ![CI](https://github.com/fhionnghaile/aegis-detector/actions/workflows/ci.yml/badge.svg)
 >
 > **What this is worth:** Where raw telemetry becomes 'something is wrong' — the signal a SOC actually acts on.
